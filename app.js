@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 
     //var num = 3+5;
     // res.write(num.toString());
-    var today = new Date();
+    
     //var day = "";
     // if (today.getDay() === 5) {
     //     day = "Sunday";
@@ -49,13 +49,7 @@ app.get('/', function (req, res) {
     // }
 
 
-    var options = {
-        weekday: 'long',
-        day: 'numeric',
-        month: 'long'
-    };
-
-    var day = today.toLocaleDateString('en-US', options);
+ 
 
     res.render('list', {
         listOfTitle: day, newListItem: items

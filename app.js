@@ -5,6 +5,9 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+const date = require(__dirname +'/date.js');
+//console.log(date);
+
 app.set('view engine', 'ejs');
 
 var items = ["Buy food", "Eat lunch", "go to gym"];
@@ -48,7 +51,7 @@ app.get('/', function (req, res) {
     //         break;
     // }
 
-
+let day = date.getDay();
  
 
     res.render('list', {
